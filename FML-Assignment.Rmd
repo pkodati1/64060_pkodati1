@@ -1,0 +1,39 @@
+---
+title: "Fundamentals of Machine Learning- Assignment 1"
+author: "Saurabh Patloori"
+date: "2023-09-09"
+output:
+  pdf_document: default
+  word_document: default
+---
+#Importing the data
+```{r}
+data =read.csv("C:/Users/patlo/OneDrive/Desktop/FML/World_Army_Dataset.csv")
+View(data)
+summary(data)
+
+```
+#descriptive statastics
+```{r}
+mean(data$activeDuty)
+
+sd(data$pop2022)
+
+```
+
+```{r}
+Countryvariance = sd(data$reserves)*sd(data$reserves)
+Countryvariance
+```
+
+#histogram
+```{r}
+hist(data$activeDuty)
+```
+#scatterplot
+```{r}
+x = data$activeDuty
+y = data$Paramiltary
+
+plot(x,y, main = "Active Duty and Paramiltary", xlab= "Activeduty" , ylab = "Paramiltary")
+```
